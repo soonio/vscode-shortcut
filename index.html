@@ -38,24 +38,36 @@
             cursor: pointer;
         }
 
+        #home {
+            bottom: 180px;
+            width: 30px;
+            height: 30px;
+            right: 42px;
+            /* background-color: rebeccapurple; */
+        }
+
         #download {
             bottom: 100px;
             width: 30px;
             height: 30px;
             right: 40px;
+            /* background-color: rebeccapurple; */
         }
 
         #github {
             right: 42px;
             bottom: 140px;
-            width: 28px;
-            height: 28px;
+            width: 27px;
+            height: 27px;
+            /* background-color: rebeccapurple; */
         }
     </style>
 </head>
 
 <body>
     <canvas id="canvas" width="3508" height="2479"> </canvas>
+    <img id="home" class="btn" title="HOME"
+        src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgd2lkdGg9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtOTIzLjczMzMzMyAzOTQuNjY2NjY3Yy04NS4zMzMzMzMtNzAuNC0yMDYuOTMzMzMzLTE3NC45MzMzMzMtMzYyLjY2NjY2Ni0zMDkuMzMzMzM0LTI3LjczMzMzNC0yMy40NjY2NjYtNzAuNC0yMy40NjY2NjYtOTguMTMzMzM0IDAtMTU1LjczMzMzMyAxMzQuNC0yNzcuMzMzMzMzIDIzOC45MzMzMzMtMzYyLjY2NjY2NiAzMDkuMzMzMzM0LTE0LjkzMzMzMyAxNC45MzMzMzMtMjUuNiAzNC4xMzMzMzMtMjUuNiA1My4zMzMzMzMgMCAzOC40IDMyIDcwLjQgNzAuNCA3MC40aDQ2LjkzMzMzM3YzNTguNGMwIDI5Ljg2NjY2NyAyMy40NjY2NjcgNTMuMzMzMzMzIDUzLjMzMzMzMyA1My4zMzMzMzNoMTYwYzI5Ljg2NjY2NyAwIDUzLjMzMzMzMy0yMy40NjY2NjcgNTMuMzMzMzM0LTUzLjMzMzMzM3YtMjA2LjkzMzMzM2gxMDYuNjY2NjY2djIwNi45MzMzMzNjMCAyOS44NjY2NjcgMjMuNDY2NjY3IDUzLjMzMzMzMyA1My4zMzMzMzQgNTMuMzMzMzMzaDE2MGMyOS44NjY2NjcgMCA1My4zMzMzMzMtMjMuNDY2NjY3IDUzLjMzMzMzMy01My4zMzMzMzN2LTM1OC40aDQ2LjkzMzMzM2MzOC40IDAgNzAuNC0zMiA3MC40LTcwLjQgMC0yMS4zMzMzMzMtMTAuNjY2NjY3LTQwLjUzMzMzMy0yNS42LTUzLjMzMzMzM3ptLTQ0LjggNTkuNzMzMzMzaC01Ny42Yy0yOS44NjY2NjcgMC01My4zMzMzMzMgMjMuNDY2NjY3LTUzLjMzMzMzMyA1My4zMzMzMzN2MzU4LjRoLTEzOC42NjY2Njd2LTIwNC44YzAtMjkuODY2NjY3LTIzLjQ2NjY2Ny01My4zMzMzMzMtNTMuMzMzMzMzLTUzLjMzMzMzM2gtMTI4Yy0yOS44NjY2NjcgMC01My4zMzMzMzMgMjMuNDY2NjY3LTUzLjMzMzMzMyA1My4zMzMzMzN2MjA2LjkzMzMzNGgtMTM4LjY2NjY2N3YtMzYwLjUzMzMzNGMwLTI5Ljg2NjY2Ny0yMy40NjY2NjctNTMuMzMzMzMzLTUzLjMzMzMzMy01My4zMzMzMzNoLTU3LjZjLTQuMjY2NjY3IDAtNi40LTIuMTMzMzMzLTYuNC02LjQgMC0yLjEzMzMzMyAyLjEzMzMzMy00LjI2NjY2NyAyLjEzMzMzMy02LjQgODUuMzMzMzMzLTcwLjQgMjA2LjkzMzMzMy0xNzQuOTMzMzMzIDM2Mi42NjY2NjctMzA5LjMzMzMzMyA0LjI2NjY2Ny00LjI2NjY2NyAxMC42NjY2NjctNC4yNjY2NjcgMTQuOTMzMzMzIDAgMTU1LjczMzMzMyAxMzQuNCAyNzcuMzMzMzMzIDIzOC45MzMzMzMgMzYyLjY2NjY2NyAzMDkuMzMzMzMzIDIuMTMzMzMzIDIuMTMzMzMzIDIuMTMzMzMzIDIuMTMzMzMzIDIuMTMzMzMzIDQuMjY2NjY3IDIuMTMzMzMzIDYuNC0yLjEzMzMzMyA4LjUzMzMzMy00LjI2NjY2NyA4LjUzMzMzM3oiIGZpbGw9IiMyYzJjMmMiLz48L3N2Zz4=" />
     <img id="download" class="btn" title="下载"
         src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgd2lkdGg9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtNTEyIDc0LjY2NjY2N2MtMjQxLjA2NjY2NyAwLTQzNy4zMzMzMzMgMTk2LjI2NjY2Ni00MzcuMzMzMzMzIDQzNy4zMzMzMzNzMTk2LjI2NjY2NiA0MzcuMzMzMzMzIDQzNy4zMzMzMzMgNDM3LjMzMzMzMyA0MzcuMzMzMzMzLTE5Ni4yNjY2NjYgNDM3LjMzMzMzMy00MzcuMzMzMzMzLTE5Ni4yNjY2NjYtNDM3LjMzMzMzMy00MzcuMzMzMzMzLTQzNy4zMzMzMzN6bTIuMTMzMzMzIDE4OS44NjY2NjZjMTcuMDY2NjY3IDAgMzIgMTQuOTMzMzMzIDMyIDMycy0xNC45MzMzMzMgMzItMzIgMzItMzItMTQuOTMzMzMzLTMyLTMyIDE0LjkzMzMzMy0zMiAzMi0zMnptMTgzLjQ2NjY2NyAzMzcuMDY2NjY3LTE3Mi44IDE1MS40NjY2NjdjLTIuMTMzMzMzIDAtMi4xMzMzMzMgMi4xMzMzMzMtNC4yNjY2NjcgMi4xMzMzMzNsLTIuMTMzMzMzIDIuMTMzMzMzYy0yLjEzMzMzMyAwLTQuMjY2NjY3IDIuMTMzMzMzLTguNTMzMzMzIDIuMTMzMzM0cy02LjQgMC04LjUzMzMzNC0yLjEzMzMzNGMwIDAtMi4xMzMzMzMgMC0yLjEzMzMzMy0yLjEzMzMzMy0yLjEzMzMzMyAwLTIuMTMzMzMzLTIuMTMzMzMzLTQuMjY2NjY3LTIuMTMzMzMzbC0xNzIuOC0xNTEuNDY2NjY3Yy04LjUzMzMzMy04LjUzMzMzMy0xMC42NjY2NjctMjEuMzMzMzMzLTIuMTMzMzMzLTI5Ljg2NjY2NyA4LjUzMzMzMy04LjUzMzMzMyAyMS4zMzMzMzMtMTAuNjY2NjY3IDI5Ljg2NjY2Ny0yLjEzMzMzM2wxMzYuNTMzMzMzIDExOS40NjY2Njd2LTI4NS44NjY2NjdjMC0xMi44IDguNTMzMzMzLTIxLjMzMzMzMyAyMS4zMzMzMzMtMjEuMzMzMzMzczIxLjMzMzMzMyA4LjUzMzMzMyAyMS4zMzMzMzQgMjEuMzMzMzMzdjI4OGwxMzYuNTMzMzMzLTExOS40NjY2NjdjOC41MzMzMzMtOC41MzMzMzMgMjEuMzMzMzMzLTYuNCAyOS44NjY2NjcgMi4xMzMzMzQgMTIuOCA2LjQgMTAuNjY2NjY3IDIxLjMzMzMzMyAyLjEzMzMzMyAyNy43MzMzMzN6IiBmaWxsPSIjMmMyYzJjIi8+PC9zdmc+" />
     <img id="github" class="btn" title="github"
@@ -165,10 +177,8 @@
             link.click();
             document.body.removeChild(link);
         })
-        document.getElementById('github').addEventListener('click', () => {
-            
-            window.open('https://github.com/soonio/vscode-shortcut', '_blank')
-        })
+        document.getElementById('github').addEventListener('click', () => window.open('https://github.com/soonio/vscode-shortcut', '_blank'))
+        document.getElementById('home').addEventListener('click', () => window.open('https://iosoon.cn', '_self'))
     </script>
 </body>
 
